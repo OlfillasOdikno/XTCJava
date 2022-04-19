@@ -1,0 +1,76 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+* {
+   -fx-baseBackground: #2d1a3f;
+   -fx-baseBackgroundDark: #161925;
+   -fx-baseMidground: #5a78ff;
+   -fx-baseTextBright: #d1d157;
+   -fx-baseTitleBar: #303641;
+}
+
+.text-area .content {
+	-fx-background-color: -fx-baseBackgroundDark ;
+	-fx-text-fill: -fx-baseTextBright;
+}
+
+#modules {
+	-fx-background-color: #404552;
+	-fx-padding: 15.0;
+    -fx-spacing: 10.0;
+}
+ 
+.console-output .text{
+ 	-fx-fill: -fx-baseTextBright;
+}
+
+.console-output {
+ 	-fx-background-color: -fx-baseBackgroundDark;
+}
+
+.console-input{
+	-fx-text-fill: -fx-baseTextBright;
+	-fx-background-color: #3d5a6c;
+	-fx-background-insets: 0.0;
+	-fx-background-radius: 0.0;
+	-fx-border-radius: 0.0;
+}
+
+.circle{
+	-fx-fill: -fx-baseMidground;
+	-fx-opacity: 60%;
+}
+.circle:hover{
+	-fx-opacity: 100%;
+}
+
+.roundBtn{
+	-fx-pref-height: 16;
+	-fx-pref-width: -fx-pref-height;
+	-fx-shape: "
+	M 0 0 
+	m -1, 0
+	a 1,1 0 1,0 2,0
+	a 1,1 0 1,0 -2,0
+	";
+	-fx-font-size: 1px;
+	-fx-opacity: 50%;
+}
+.roundBtn:hover{
+	-fx-opacity: 100%;
+}
+
+#close{
+	-fx-background-color: #f44336;
+}
+
+#maximize{
+	-fx-background-color: #8bc34a;
+}
+
+#minimize{
+	-fx-background-color: #ff9800;
+}
+
+.titleBar{
+	-fx-background-color: -fx-baseTitleBar;
+	-fx-spacing: 16;
+}

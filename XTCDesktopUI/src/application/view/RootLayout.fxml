@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ScrollPane?>
+<?import application.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.RootController">
+	<left>
+		<VBox fx:id="modules" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+			<children>
+				<StackPane prefHeight="60.0" prefWidth="60.0">
+					<children>
+						<Circle fx:id="aimBtn" radius="30.0" strokeWidth="0.0" styleClass="circle" />
+						<ImageView fitHeight="60.0" fitWidth="60.0" mouseTransparent="true" pickOnBounds="false" preserveRatio="true" smooth="false">
+							<image>
+								<Image url="@/icons/Aimbot.svg" />
+							</image>
+						</ImageView>
+					</children>
+				</StackPane>
+				<StackPane prefHeight="60.0" prefWidth="60.0">
+					<children>
+						<Circle fx:id="mapBtn" radius="30.0" strokeWidth="0.0" styleClass="circle" />
+						<ImageView fitHeight="60.0" fitWidth="60.0" mouseTransparent="true" pickOnBounds="false" preserveRatio="true">
+							<image>
+								<Image url="@/icons/Map.svg" />
+							</image>
+						</ImageView>
+					</children>
+				</StackPane>
+				<StackPane prefHeight="60.0" prefWidth="60.0">
+					<children>
+						<Circle fx:id="multiBtn" radius="30.0" strokeWidth="0.0" styleClass="circle" />
+						<ImageView fitHeight="60.0" fitWidth="60.0" mouseTransparent="true" pickOnBounds="false" preserveRatio="true">
+							<image>
+								<Image url="@/icons/MultiPlayer.svg" />
+							</image>
+						</ImageView>
+					</children>
+				</StackPane>
+				<StackPane prefHeight="60.0" prefWidth="60.0">
+					<children>
+						<Circle fx:id="prefBtn" radius="30.0" strokeWidth="0.0" styleClass="circle" />
+						<ImageView fitHeight="60.0" fitWidth="60.0" mouseTransparent="true" pickOnBounds="false" preserveRatio="true">
+							<image>
+								<Image url="@/icons/Settings.svg" />
+							</image>
+						</ImageView>
+					</children>
+				</StackPane>
+			</children>
+		</VBox>
+	</left>
+	<center>
+		<SplitPane dividerPositions="0.75" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+			<items>
+				<ScrollPane fx:id="modulePane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+				<ConsoleArea prefHeight="200.0" prefWidth="200.0" />
+			</items>
+		</SplitPane>
+	</center>
+	<top>
+		<HBox onMouseDragged="#moveWindow" onMousePressed="#initMoveWindow" styleClass="titleBar" BorderPane.alignment="CENTER">
+			<children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="XTC" textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Roboto Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <HBox alignment="TOP_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+      				<ToolBar nodeOrientation="RIGHT_TO_LEFT" styleClass="titleBar">
+      					<items>
+      						<Button fx:id="close" onAction="#close" styleClass="roundBtn" />
+      						<Button fx:id="maximize" onAction="#maximize" styleClass="roundBtn" />
+      						<Button fx:id="minimize" onAction="#minimize" styleClass="roundBtn" />
+      					</items>
+      				</ToolBar>
+               </children>
+            </HBox>
+			</children>
+		</HBox>
+	</top>
+
+</BorderPane>

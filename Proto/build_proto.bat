@@ -1,0 +1,1 @@
+protoc.exe --proto_path=protobuf --java_out=src protobuf\cstrike15_usermessages_public.proto protobuf\netmessages_public.proto protobuf\steamnetworkingsockets_messages.proto protobuf\steamnetworkingsockets_messages_certs.proto protobuf\steamnetworkingsockets_messages_udp.proto

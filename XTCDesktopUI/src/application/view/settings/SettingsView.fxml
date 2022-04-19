@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.settings.SettingsController">
+   <children>
+      <RadioButton fx:id="passiveImpl" mnemonicParsing="false" text="PassiveMode">
+         <toggleGroup>
+            <ToggleGroup fx:id="sniffImpl" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="proxyImpl" alignment="CENTER_LEFT" mnemonicParsing="false" text="ProxyMode" toggleGroup="$sniffImpl">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </RadioButton>
+      <Separator orientation="VERTICAL" visible="false" />
+      <HBox alignment="TOP_CENTER">
+         <children>
+            <ToggleButton fx:id="startButton" mnemonicParsing="false" text="Start" />
+            <Button mnemonicParsing="false" text="Reset"  fx:id="resetButton"/>
+         </children>
+      </HBox>
+   </children>
+</VBox>

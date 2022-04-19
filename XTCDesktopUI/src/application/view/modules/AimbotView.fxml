@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.modules.AimBotController">
+   <children>
+      <Button fx:id="testBtn" mnemonicParsing="false" text="Test" />
+      <ToggleButton fx:id="switchBtn" mnemonicParsing="false" text="Turn On" />
+      <Label text="Factor X" fx:id="facX"/>
+      <Label text="Factor Y" fx:id="facY"/>
+   </children>
+</VBox>
